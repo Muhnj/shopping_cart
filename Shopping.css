@@ -1,0 +1,36 @@
+
+body { 
+    font-family: Arial, 
+    sans-serif; 
+    text-align: center; 
+}
+.container { 
+    width: 80%; 
+    margin: auto; 
+}
+.products, .cart { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+.product, .cart-item {
+     border: 1px solid #ccc; 
+    margin: 10px; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+img { 
+    width: 100px; 
+    height: 100px; 
+}
+ button { 
+    cursor: pointer; 
+    background: blue; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+}
+.checkout { 
+    margin-top: 20px; 
+    display: none; 
+}
