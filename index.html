@@ -8,24 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Product Catalog</h1>
+        <h1>🛒 Product Catalog</h1>
         <div class="products">
             <div class="product" data-id="1" data-name="Laptop" data-price="800">
                 <img src="./images/laptop.jpg" alt="Laptop">
-                <p>Laptop - $800</p>
+                <p><strong>Laptop</strong> - $800</p>
                 <button onclick="addToCart(1, 'Laptop', 800)">Add to Cart</button>
             </div>
             <div class="product" data-id="2" data-name="Phone" data-price="500">
                 <img src="./images/phone.jpg" alt="Phone">
-                <p>Phone - $500</p>
+                <p><strong>Phone</strong> - $500</p>
                 <button onclick="addToCart(2, 'Phone', 500)">Add to Cart</button>
             </div>
         </div>
 
-        <h2>Shopping Cart</h2>
-        <div class="cart"></div>
-        <h3>Total: $<span id="total">0</span></h3>
-        <button onclick="showCheckout()">Proceed to Checkout</button>
+        <button class="toggle-cart" onclick="toggleCart()">🛍 View Cart</button>
+
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+            <div class="cart"></div>
+            <h3>Total: $<span id="total">0</span></h3>
+
+            <input type="text" id="discount-code" placeholder="Enter Discount Code">
+            <button onclick="applyDiscount()">Apply Discount</button>
+
+            <button onclick="showCheckout()">Proceed to Checkout</button>
+        </div>
     </div>
 
     <div class="checkout">
@@ -35,7 +43,9 @@
             <label>Address: <input type="text" id="address"></label><br>
             <button type="submit">Submit Order</button>
         </form>
+        <button onclick="hideCheckout()">Cancel</button>
     </div>
-<script src="./shopping.js"></script>
+
+    <script src="./shopping.js"></script>
 </body>
 </html>
